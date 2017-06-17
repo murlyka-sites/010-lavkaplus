@@ -1,0 +1,115 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+		meta(content="telephone=no", name="format-detection")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		title
+			| Лавка плюс
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400&amp;subset=cyrillic")
+		link(rel="stylesheet", href="css/bootstrap.css")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css")
+		link(rel="stylesheet", href="css/jquery.scrollUp.min.css")
+		link(rel="stylesheet", href="css/style.css")
+		//- link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css")
+	body
+		include jade/header.jade
+		include jade/main.jade
+		include jade/catalog.jade
+		include jade/foo.jade
+		
+		.hidden
+			.popup#basket
+				.popup__header
+					a.popup__gray-link.clear-basket(href="#clear")
+						| Очистить корзину
+					.popup__title
+						| Продуктов в корзине на  
+						span.basket-total
+							| 0
+						|  рублей
+					.popup__slogan
+						| По каждому заказу мы вручную выбираем и упаковываем самые свежие продукты на рынке
+				.popup__items.basket-list.popup__items_empty
+				.popup__foo
+					a.btn_theme_green.popup__foo-btn.fancy(href="#order")
+						| оформить заказ
+
+			form.popup.popup_size_sm#order(action="index.html")
+				.popup__header
+					a.popup__gray-link.fancy(href="#basket")
+						| Назад в корзину
+
+					.popup__title
+						| Доставка
+					.popup__slogan
+						| Общая стоимость  
+						span.basket-total
+							| 0
+						|  рублей, доставка в пределах КАД всего за 290 рублей
+				.popup__form
+					.clearfix
+						.col-xs-6
+							input.popup__field(type="text", name="name", placeholder="Укажите имя", required)
+						.col-xs-6
+							input.popup__field.input_phone(type="text", name="phone", placeholder="Номер телефона", required)
+					.clearfix
+						.col-xs-6
+							select.popup__field
+								option(value="1")
+									| Cегодня, 14 февраля
+								option(value="1")
+									| Завтра, 15 февраля
+								option(value="1")
+									| 16 февраля
+						.col-xs-6
+							select.popup__field
+								option(value="1")
+									| 19:00-20:00
+								option(value="1")
+									| 20:00-21:00
+								option(value="1")
+									| 21:00-22:00
+					.clearfix
+						.col-xs-12
+							input.popup__field(type="text", name="address", placeholder="Адрес доставки", required)
+					.clearfix
+						.col-xs-12
+							textarea.popup__field.popup__field_comment(name="comment", placeholder="Комментарий к заказу")
+				.popup__foo
+					button.btn_theme_green.popup__foo-btn(type="submit")
+						| оформить заказ
+			
+			.popup.popup_success.popup_size_sm#success
+				img.popup__pr_success(src="images/success.png", width="128", height="128", alt="success")
+				.popup__title
+					| Спасибо, ваш заказ принят!
+				.popup__slogan
+					| Стоимость по весовым позициям заказа может незначительно измениться.
+					br
+					| По любым вопросам звоните нам: 
+					a(href="tel:84951201841")
+						| 8 (495) 120-18-41
+
+			//- .popup#call
+			//- 	h3.text__h3.popup__title
+			//- 		| Обратный звонок
+			//- 	form(method="POST")
+			//- 		input.popup__input(name="name", type="text", placeholder="Имя", required)
+			//- 		input.popup__input.input--phone(name="phone", type="text", placeholder="Телефон", required)
+			//- 		button.btn.btn_theme_white.popup__btn(type="submit")
+			//- 			| Отправить
+			//- .gradient.popup#success
+			//- 	h3.text__h3.popup__title.popup__title--success
+			//- 		| Форма успешно отправлена!
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+		script(src="js/jquery-animate-css-rotate-scale.js")
+		script(src="js/jquery-css-transform.js")
+		//- script(src="js/jquery.lazyload.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js")
+		//- script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js")
+		script(src="js/jquery.form.min.js")
+		script(src="js/jquery.scrollUp.min.js")
+		script(src="js/main.js")

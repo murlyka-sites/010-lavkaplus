@@ -1,0 +1,99 @@
+mixin catalog-item(index, title, country)
+	.catalog__grid
+		.catalog__item(data-price="220", data-count="1")
+			.catalog__item-pr
+				img.lazy(src="images/catalog/" + index + ".jpg", alt=title, width="229", height="220")
+			.catalog__item-text
+				.catalog__item-title
+					| #{title}
+				.catalog__item-country
+					| #{country}
+			.catalog__item-control
+				.catalog__item-count
+					select.select-count
+						option(value="1")
+							| 1 кг
+						option(value="2")
+							| 2 кг
+						option(value="3")
+							| 3 кг
+				.catalog__item-buy
+					button.btn.btn_theme_green.btn-buy.catalog__item-btn-buy.btn-buy_plus
+						| 220р
+
+
+
+
+.catalog
+	.container
+		.row
+			.col-xs-12
+				.catalog__container
+					h3.text__h3.text__green.catalog__title
+						| фрукты и офощи
+					.catalog__items.catalog-items-1
+						+catalog-item(1, "Черри бакинские", "Азаейбаржан")
+						+catalog-item(2, "Молодой красный картофель", "Азаейбаржан")
+						+catalog-item(3, "Огурцы тепличные крупные", "Россия")
+						+catalog-item(4, "Баклажаны мини", "Азаейбаржан")
+						+catalog-item(5, "Голубика в упаковке ~&nbsp;125 гр", "Чили")
+						+catalog-item(1, "Черри бакинские", "Азаейбаржан")
+						+catalog-item(2, "Молодой красный картофель", "Азаейбаржан")
+						+catalog-item(3, "Огурцы тепличные крупные", "Россия")
+						+catalog-item(4, "Баклажаны мини", "Азаейбаржан")
+						+catalog-item(5, "Голубика в упаковке ~&nbsp;125 гр", "Чили")
+					button.catalog__more.btn_theme_white-green.btn_plus(data-container=".catalog-items-1")
+						| еще 
+						span.catalog__more-count
+							| 9
+						span.catalog__more-count.catalog__more-count_xs
+							| 8
+						span.catalog__more-count.catalog__more-count_sm
+							| 7
+						span.catalog__more-count.catalog__more-count_md
+							| 6
+						span.catalog__more-count.catalog__more-count_lg
+							| 5
+						|  продукта
+				.catalog__container
+					h3.text__h3.text__green.catalog__title
+						| Хлеб и орехи
+					.catalog__items.catalog-items-2
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(7, "Сушеная клюква в упаковке ~ 150 гр.", "Карелия")
+						+catalog-item(8, "Миндаль жареный от нового поставщика", "Иран")
+						+catalog-item(9, "Ржаной бездрожжевой хлеб", "Россия")
+						+catalog-item(10, "Фисташки очищенные высшего сорта", "Иран")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+						+catalog-item(6, "Хурма сушеная", "Армения")
+					button.catalog__more.btn_theme_white-green.btn_plus(data-container=".catalog-items-2")
+						| еще 
+						span.catalog__more-count
+							| 23
+						span.catalog__more-count.catalog__more-count_xs
+							| 22
+						span.catalog__more-count.catalog__more-count_sm
+							| 21
+						span.catalog__more-count.catalog__more-count_md
+							| 20
+						span.catalog__more-count.catalog__more-count_lg
+							| 19
+						|  продукта

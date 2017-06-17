@@ -1,0 +1,17 @@
+{
+  "name": "lavka+",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Millok Murlyka"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
